@@ -1,46 +1,60 @@
-⚙️ Script Neler Yapabiliyor?
+<p align="center">
+  <img src="https://capsule-render.vercel.app/render?type=waving&color=0088cc&height=200&section=header&text=Telegram%20Bulk%20Messenger&fontSize=50&animation=fadeIn" />
+</p>
 
-✅Otomatik Mesaj Gönderimi:
-Belirlediğiniz bir mesajı kişi listenizdeki herkese otomatik olarak gönderir.
+<div align="center">
 
-✅Spam Koruması:
-Telegram’ın sizi spam olarak algılamaması için her mesaj arasında akıllı, rastgele bekleme süresi ekler.
-(Hesabınızın güvenliği için çok önemli &#128274
+# 📩 Telegram Auto-Message & Marketing Suite
+**Güvenli, Akıllı ve Hızlı Toplu Mesaj Gönderim Çözümü**
 
-✅Akıllı Hata Yönetimi:
-Telegram’ın “Çok fazla istek gönderdin” (FloodWaitError) gibi uyarılarını algılar ve hata vermeden otomatik olarak bekleyip devam eder.
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Telethon](https://img.shields.io/badge/Library-Telethon-blue.svg?style=for-the-badge)](https://docs.telethon.dev/)
+[![Safety](https://img.shields.io/badge/Security-Anti--Spam_Ready-brightgreen.svg?style=for-the-badge)]()
+[![UI](https://img.shields.io/badge/UI-Rich_Terminal-ff69b4.svg?style=for-the-badge)]()
 
-✅Kolay Ayarlar:
-Tüm yapılandırmalar (API bilgileri, mesaj içeriği, bekleme süreleri vb.) dosyanın en üst kısmından kolayca düzenlenebilir.
-
-✅Şık Görsel Arayüz:
-rich kütüphanesi sayesinde terminalde renkli, anlaşılır ve estetik bir arayüz sunar. 🌈
+</div>
 
 ---
 
-🧩 Kurulum Adımları
+## ⚡ Temel Yetenekler
 
-1️⃣ Python Yükleyin
-Bilgisayarınızda Python yoksa python.org adresine gidin ve en güncel sürümü indirin.
-Kurulum sırasında "Add Python to PATH" kutusunu işaretlemeyi unutmayın.
+Bu script, sıradan bir mesaj göndericiden ziyade, Telegram limitlerini akıllıca yöneten bir **otomasyon motorudur**.
 
-2️⃣ Telegram API Bilgilerini Alın
-1. https://my.telegram.org adresine gidin ve telefon numaranızla giriş yapın.
-2. "API development tools" kısmına tıklayın.
-3. Uygulama adı ve kısa adı girin (örnek: “OtoMesaj”, “mesajbot”).
-4. Karşınıza çıkan api_id ve api_hash değerlerini bir kenara not alın.
+- **🤖 Tam Otomasyon:** Rehberinizdeki veya kişi listenizdeki herkese belirlediğiniz mesajı iletir.
+- **🛡️ Gelişmiş Anti-Spam:** Telegram algoritmalarına yakalanmamak için **"Smart Random Delay"** (Akıllı Rastgele Bekleme) kullanır.
+- **🚦 FloodWait Yönetimi:** "Çok fazla istek" uyarısı aldığında durmaz; süreyi hesaplar, bekler ve otomatik devam eder.
+- **🌈 Rich Terminal UI:** İşlem süreçlerini, hataları ve başarıları renkli, estetik tablolarla anlık takip edin.
+- **⚙️ Kolay Konfigürasyon:** Teknik bilgi gerekmeden `config` üzerinden saniyeler içinde ayarlanabilir.
 
-3️⃣ Gerekli Kütüphaneleri Yükleyin
-Komut satırına şu komutu yazın:
-Kod
-1
+---
+
+## 📸 Arayüz Önizlemesi
+*(Buraya terminalden aldığın renkli bir ekran görüntüsünü eklemeni şiddetle öneririm)*
+> **Not:** `rich` kütüphanesi kullandığın için terminalin çok şık duracaktır, bunu mutlaka sergile!
+
+---
+
+## 🛠️ Kurulum Rehberi
+
+### 1️⃣ Hazırlık
+Sisteminizde Python yüklü olduğundan emin olun. Ardından gerekli kütüphaneleri tek komutla kurun:
 pip install telethon rich
-4️⃣ Scripti Çalıştırın
-Kaydettiğiniz dosyanın bulunduğu klasöre gidin ve terminalde:
-Kod
-1
-python oto_mesaj.py
-komutunu çalıştırın.
+2️⃣ Telegram API Anahtarlarını Alma
+my.telegram.org adresine gidin ve giriş yapın.
 
-İlk çalıştırmada sizden telefon numaranızı, Telegram’a gelen kodu ve (varsa) iki adımlı doğrulama şifrenizi isteyecektir.
-Bu bilgileri girdikten sonra program otomatik olarak çalışmaya başlar. ✅
+API development tools bölümünden yeni bir uygulama oluşturun.
+
+Size verilen api_id ve api_hash değerlerini script içerisindeki ilgili alanlara yapıştırın.
+
+3️⃣ Çalıştırma
+Klasör içinde terminali açın ve botu ateşleyin:
+
+python oto_mesaj.py
+[!TIP]
+İlk girişte telefon numaranıza gelen doğrulama kodunu terminale girmeniz yeterlidir. Oturumunuz güvenli bir şekilde .session dosyasında saklanacaktır.
+
+📂 Dosya Yapısı
+Plaintext
+├── 📄 oto_mesaj.py      # Ana çalışma motoru ve UI
+├── 🔑 telegram.session  # (İlk girişten sonra oluşur) Oturum dosyası
+└── 📄 README.md         # Kullanım kılavuzu
